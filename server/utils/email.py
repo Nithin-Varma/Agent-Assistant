@@ -1,6 +1,6 @@
 from typing import List
 import mailersend
-from app.settings import settings
+from app_settings import settings
 from pydantic import BaseModel
 
 class MailDetails(BaseModel):

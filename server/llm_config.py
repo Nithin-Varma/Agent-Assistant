@@ -3,7 +3,7 @@ from llama_index.embeddings.ollama import OllamaEmbedding
 from llama_index.llms.openai import OpenAI
 from llama_index.llms.ollama import Ollama
 from llama_index.core import Settings
-from app.settings import settings
+from app_settings import settings
 
 # Configure the LLM settings
 if settings.USE_OLLAMA:

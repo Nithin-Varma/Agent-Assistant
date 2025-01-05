@@ -7,8 +7,8 @@ import json
 
 from fastapi import FastAPI, Request
 
-from app.settings import settings
-from app.utils.email import send_email, MailDetails
+from app_settings import settings
+from utils.email import send_email, MailDetails
 
 import logging
 logger = logging.getLogger(__name__)

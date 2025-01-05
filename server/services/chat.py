@@ -14,11 +14,11 @@ from llama_index.core import Settings
 
 import requests
 import dateparser
-from app.utils.email import send_email, MailDetails
+from utils.email import send_email, MailDetails
 
 
 
-from app.settings import settings
+from app_settings import settings
 
 
 def extract_date_from_text(date_text):

@@ -2,8 +2,8 @@ from datetime import datetime, timezone
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from app.models.chat import QueryRequest
-from app.services.chat import chat_agent
+from models.chat import QueryRequest
+from services.chat import chat_agent
 
 router = APIRouter(
     prefix="/chat",

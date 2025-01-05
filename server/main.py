@@ -6,10 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 
-from app.routers import chat
-from app.routers import email
-from app.routers import voice
-from app.settings import settings
+from routers import chat
+from routers import email
+from routers import voice
+from app_settings import settings
 
 
 logger = logging.getLogger(__name__)
