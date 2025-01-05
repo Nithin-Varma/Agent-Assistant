@@ -9,7 +9,7 @@ class AppSettings(BaseSettings):
     load_dotenv()
 
     # Modify to restrict to origin of your choice
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl | str] = [
+    BACKEND_CORS_ORIGINS: List[ str] = [
         "*",
         # "http://localhost:3000"
     ]
