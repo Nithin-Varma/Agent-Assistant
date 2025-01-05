@@ -48,7 +48,7 @@ uvicorn app.main:app --reload
 - You should see a JSON response:
 
   ```json
-  { "message": "Welcome to Franky Backend" }
+  { "message": "Welcome to Backend" }
   ```
 
 ### 5. Explore the API Documentation
