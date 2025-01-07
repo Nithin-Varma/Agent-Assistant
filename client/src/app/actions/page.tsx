@@ -1,6 +1,8 @@
+// pages/mom-test-query.tsx
 "use client";
 
 import ChatQuery from "../appcomponents/ChatQuery";
+import { ChatProvider } from "../context/ChatContext";
 
 // Actual API fetcher function
 const momTestFetcher = async (input: string) => {
@@ -35,23 +37,25 @@ const momTestFetcher = async (input: string) => {
 export default function MomTestQueryPage() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-10 px-4">
-      <div className="w-full max-w-4xl mx-auto text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          🤖 Send Email using actions
+      <div className="w-full max-w-4xl mx-auto text-center mb-12">
+        <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          🤖 Send Email using Actions
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Enter a prompt and send email! It’s quick and easy!
+        <p className="text-2xl text-gray-600 dark:text-gray-300">
+          Enter your emails and a message to send! It’s quick and easy!
         </p>
       </div>
 
-      <div className="w-full max-w-4xl p-6 space-y-6 mx-auto">
-        <ChatQuery
-          heading="Enter your query"
-          description="We will generate a response and also list sources from the MOM test for you to check out!"
-          showSources={true}
-          defaultValue="You are an expert at "
-          fetcher={momTestFetcher} // Pass the actual fetcher function as a prop
-        />
+      <div className="w-full max-w-4xl mx-auto">
+        <ChatProvider>
+          <ChatQuery
+            heading="Compose Your Email"
+            description="Provide the necessary details below to generate and send your email."
+            showSources={true}
+            defaultValue=""
+            fetcher={momTestFetcher} 
+          />
+        </ChatProvider>
       </div>
     </div>
   );
